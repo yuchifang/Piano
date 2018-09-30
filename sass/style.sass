@@ -1,0 +1,116 @@
+$white_key_width: 44px
+$key_height: 300px
+$color_white: #eee
+$color_black: #585858
+$white_key_width: 44px
+$key_height: 300px
+
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+*
+  vertical-align: top
+  font-family: 微軟正黑體
+  backface-visibility: hidden
+  
+
+html,body
+  +size(100%,100%)
+  margin: 0
+  padding: 0
+h2
+  margin-bottom: 30px
+  color: $color_black
+button
+  background-color: transparent
+  border: none
+  border: solid 1px
+  padding: 4px 12px
+  border-radius: 30px
+  transition: 0.5s 0.2s
+  cursor: pointer
+  &:hover
+    background-color: $color_black
+    color: white
+.notes_list
+  li
+    display: inline-block
+    border-right: solid 1px
+    padding: 2px 5px
+    cursor: pointer
+    transition: 0.3s
+    &:hover
+      background-color: darken($color_white,5)
+    &.playing
+      background-color: darken($color_white,10)
+    .time
+      font-size: 8px
+      opacity: 0.4
+    .num
+      font-size: 19px
+       
+.center_box 
+  width: 100%
+  text-align: center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+.keyboard
+  box-shadow: 0px 0px 35px +0px rgba(0,0,0,0.4)
+  //左右偏移是0 上下偏移0 擴散40
+  //左右撐滿預設display: block
+  display: inline-block
+  margin-bottom: 30px
+.painokey
+  cursor: pointer
+  display: inline-block
+  position: relative
+
+.white.playing
+  background-color: darken($color_white,10)
+  transform: translate(0px, 0px)
+.black.playing
+  background-color: darken($color_black,10)
+  transform: translate(0px, 0px)
+
+.white
+  +size($white_key_width,$key_height)
+  border: solid 1px $color_white
+  transform: translate(-3px,-3px)
+  transition: 0.1s
+  &:hover
+    transform: translate(0px,0px)
+    background-color: $color_white
+  
+.black
+  position: absolute
+  top: 0px
+  width: $white_key_width/2
+  height: $key_height*0.55
+  margin-left: - $white_key_width/4
+  margin-right: - $white_key_width/4
+  background-color: $color_black
+  z-index: 2 
+  transform: translate(-3px,-3px)
+  transition: 0.1s
+  &:hover
+    transform: translate(0px,0px)
+    background-color: darken($color_black,10)
+  //要用z-index 要 position: absolute
+.label
+  position: absolute
+  color: rgba($color_black,0.5)
+  bottom: -25px
+  left: 50%
+  transform: translate(-50%)
+  font-size: 13px
+  
+  
+i
+  margin-left: 10px 
+  margin-right: 0px
+  margin-top: 3px
+i.fa-circle
+  color: darken(red,10)
