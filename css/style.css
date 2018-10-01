@@ -74,12 +74,12 @@ button:hover {
 }
 
 .white.playing {
-  background-color: #d5d5d5;
+  background-color: blue;
   transform: translate(0px, 0px);
 }
 
 .black.playing {
-  background-color: #3f3f3f;
+  background-color: blue;
   transform: translate(0px, 0px);
 }
 
@@ -92,7 +92,7 @@ button:hover {
 }
 .white:hover {
   transform: translate(0px, 0px);
-  background-color: #eee;
+  background-color:blue;
 }
 
 .black {
@@ -109,7 +109,7 @@ button:hover {
 }
 .black:hover {
   transform: translate(0px, 0px);
-  background-color: #3f3f3f;
+  background-color: blue;
 }
 
 .label {
