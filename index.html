@@ -24,7 +24,7 @@
     </audio>
   </div>
   <div class="center_box">
-    <h2>Vye.js Piano Project</h2>
+    <h2>Vue.js Piano Project</h2>
     <div class="keyboard">
       <div class="painokey" v-for="s in display_keys">
         <div class="white" v-if="s.type==&quot;white&quot;" v-on:click="addnote(s.num,1)" v-bind:class="get_current_highhlight(s.num,s.key)?&quot;playing&quot;:&quot;&quot;">
