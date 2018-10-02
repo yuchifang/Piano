@@ -7,5 +7,5 @@ Use Vue 2.1.8</br>
 Use Jquery 3.3.1
 
 ## Video Walk Through
-![](https://i.imgur.com/Ysk89o1.gif)
+![](https://i.imgur.com/ApHZ43P.gif)
 
